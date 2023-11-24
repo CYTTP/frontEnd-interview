@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 什么是原型链
+    //定义一个对象的时候就有一个预定也的 proto属性 指向 prototype原型对象
+
+    function fn () {
+
+    }
+
+    fn.prototype.num = function () {
+      console.log(134)
+    }
+
+    var s = new fn()
+
+
+    //console.log(fn.prototype.constructor === fn)  原型对象中构造函数对于 原函数
+    console.log(fn.prototype.num === s.num)   // true
+  </script>
+</body>
+</html>

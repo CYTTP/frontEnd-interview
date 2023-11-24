@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // typeof () 对于基本数据类型没问题，遇到引用数据类型就不管用
+        console.log( typeof 666 ) //number
+        console.log( typeof [1,2,3] ) //object
+    // instanceof () 只能判断引用数据类型，不能判断基本数据类型
+        console.log( [] instanceof Array ) //true
+        console.log( 'abc' instanceof String ) //false
+    // constructor 几乎可以判断基本数据类型和引用数据类型;如果声明了一个构造函数，并把它的原型指向了Array
+        console.log( ('abc').constructor === String ) //object
+    // Object.prototype.toString.call()
+        var opt = Object.prototype.toString
+        console.log( opt.call(2) )
+        console.log( opt.call(true) )
+        console.log( opt.call('aaa') )
+        console.log( opt.call([]) )
+        console.log( opt.call({}) )
+
+</script>
+
+</html>

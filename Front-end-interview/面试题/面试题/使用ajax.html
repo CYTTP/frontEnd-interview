@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">显示消息盒子</div>
+  <button class="button">获取</button>
+  <form action="http:127.0.0.1:3000" method="POST">
+    <input type="text" name="user">
+    <input type="password" name="password">
+    <button type="submit">提交</button>
+  </form>
+  <script src="./封装ajax.js"></script>
+  <script>
+    const app = document.getElementById('app')
+    const btn = document.querySelector('button')
+    //btn.onclick = function () {
+    //  var XmlHttp
+    //  if (window.XMLHttpRequest) {
+    //    XmlHttp = new XMLHttpRequest()
+    //  } else {
+    //    // ie6 一下创建
+    //    XmlHttp = new ActiveXObject("Microsoft.XMLHTTP")
+    //  }
+
+    //  // 规定请求的类型、URL 以及是否异步处理请求。
+    //  // XmlHttp.open("GET","test1.txt",true)
+    //  // 1. method: 使用GET，还是POST请求
+    //  // 2. url： 文件在服务器的位置
+    //  // 3. async： 异步处理 true 表示异步 false表示同步
+
+    //  // 发送请求
+    //  // XmlHttp.send(String)
+    //  // string：仅用于 POST 请求
+
+
+    //  // 如需获得来自服务器的响应，请使用 XMLHttpRequest 对象的 responseText这是 ：字符串 或 responseXML 属性。
+    //  var s = Math.random()
+    //  console.log(s)
+    //  XmlHttp.open('get', 'http://127.0.0.1:3000?t=' + s, true)
+    //  XmlHttp.send()
+
+    //  XmlHttp.onreadystatechange = function (v) {
+    //    //console.log(XmlHttp)
+    //    if (XmlHttp.readyState === 4) {
+    //      if (XmlHttp.status >= 200 && XmlHttp.status < 300) {
+    //        console.log('获取成功')
+    //      } else {
+    //        console.log('获取失败')
+    //      }
+    //    }
+    //    //console.log(v)
+    //    app.innerHTML = XmlHttp.responseText
+    //  }
+    //}
+      btn.onclick = function (e) {
+        ajax('get', 'http://127.0.0.1:3000',{
+          name: 123,
+          password: 888
+        }, function(v){
+          console.log(v.response)
+        }, function () {})
+      }
+  </script>
+</body>
+
+</html>

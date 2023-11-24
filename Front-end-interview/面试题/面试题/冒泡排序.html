@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var arr = [8,9,6,7,2]
+
+    function fn (arr) {
+      if (!arr) return 
+      for (var j = 0; j < arr.length - 1; j++) {
+        for (var i = 0; i < arr.length - 1; i++) {
+          if (arr[i] > arr[i + 1]) {
+            var max = arr[i]
+            arr[i]  = arr[i + 1]
+            arr[i + 1] = max
+          }
+        }
+      }
+      return arr
+    }
+
+    console.log(fn(arr))
+  </script>
+</body>
+</html>

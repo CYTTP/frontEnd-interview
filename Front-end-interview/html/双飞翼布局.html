@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>双飞翼布局</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*.content{
+      border: 1px solid #111;
+      width: 100%;
+      float: left;
+    }
+    .center{
+      background-color: yellow;
+      height: 100px;
+      width: 100%;
+      float: left;
+    }
+    .left{
+      height: 100px;
+      width: 100px;
+      background-color: red;
+      margin-left: -100%;
+      float: left;
+    }
+    .right{
+      height: 100px;
+      width: 100px;
+      float: left;
+      margin-left: -100px;
+      background-color: blue;
+    }
+    p{
+      margin: 0 100px;
+    }*/
+    .box {
+      /*position: relative;*/
+      border: 1px solid #211;
+    }
+    .box:after{
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .left,
+    .right {
+      /*position: absolute;
+      top: 0;*/
+      float: left;
+      height: 100px;
+      width: 100px;
+      background-color: red;
+    }
+
+    .right {
+      float: right;
+      /*right: 0;*/
+    }
+
+    .center {
+      margin: 0 100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <!--<div class="content">
+    <div class="center">112
+
+      <p>213</p>
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>-->
+
+  <div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center">1234</div>
+  </div>
+  <script>
+    // 实现一个数组里面 在里面添加|
+    //var arr = ['blue','red','yellow'];
+    
+    //var str = '';
+    //for (var i = 0; i < arr.length; i++) {
+    //  str += arr[i] + '|'
+    //};
+    //console.log(str);
+
+    // 实现 存入1到100 数组里面
+    //var arr = [];
+    //for (var i = 0; i <=100; i++) {
+    //  //arr.push(i)
+    //  //arr.unshift(i)
+    //  arr[100 - i] = i
+    //}
+    //console.log(arr)
+  </script>
+</body>
+
+</html>

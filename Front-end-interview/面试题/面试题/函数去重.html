@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .a {
+      width: 0;
+      height: 0;
+      border-width: 100px;
+      border-style: solid;
+      border-color: transparent #0099CC transparent transparent;
+      transform: rotate(90deg);
+      /*顺时针旋转90°*/
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="a"></div>
+  <script>
+    // 面试题目： 请将编写一个函数将 [3, 5, 7, 2, 1, 8, 9, 0, 5, 23, 15, 5, 1, 5, 8] 这样的一个组件中重复的元素去除掉
+    var arr = [3, 5, 7, 2, 1, 8, 9, 0, 5, 23, 15, 5, 1, 5, 8]
+
+    // 使用双重for 循环
+    // 当前元素和后面一个元素做比较 如何重复 着删除这个元素 j-- 再继续遍历 使用splic()
+    function fn(val) {
+      for (var i = 0; i < val.length; i++) {
+        for (var j = i + 1; j < val.length; j++) {
+          if (val[i] == val[j]) {
+            val.splice(j, 1)
+            j--
+          }
+        }
+      }
+      return val
+    }
+
+
+    var Arr = fn(arr)
+    console.log(Arr)
+  </script>
+</body>
+
+</html>

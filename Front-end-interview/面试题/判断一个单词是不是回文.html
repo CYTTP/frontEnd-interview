@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 判断一个单词或者字符是不是回文
+    // 使用方法 有 
+    // 1.split() 把一个字符串分割成字符串数组
+    // 2. join() 法用于把数组中的所有元素放入一个字符串。
+    // 3. reverse() 方法用于颠倒数组中元素的顺序  只会改变 不会创建新的数组
+    var str = 'mamam' 
+    function fn (str) {
+      return str == str.split('').reverse().join('');
+    }
+    var s =  fn (str)
+    console.log(s)
+  </script>
+</body>
+</html>

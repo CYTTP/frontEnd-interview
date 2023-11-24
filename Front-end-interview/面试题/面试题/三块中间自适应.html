@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .f{
+    position: relative;
+  }
+  /*.one,.there{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    float: left;
+  }
+  .there{
+    float: right;
+    margin-top: -100px;
+  }
+  .two{
+    margin:0 100px;
+    height: 100px;
+    background-color: blue;
+  }*/
+  .one{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+  }
+  .there{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+  }
+  .two{
+    height: 100px;
+    margin:0 100px;
+    background-color: blue;
+  }
+
+</style>
+<body>
+  <div class="f">
+    <div class="one"></div>
+    <div class="two">自适应</div>
+    <div class="there"></div>
+  </div>
+</body>
+</html>
